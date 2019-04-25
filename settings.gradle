@@ -4,6 +4,6 @@ include 'api'
 include 'entity'
 include 'manager'
 include 'quartz'
-include 'saller'
 include 'swagger'
+include 'seller'
 
