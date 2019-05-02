@@ -1,4 +1,7 @@
 dependencies{
     compile project (":entity")
-    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.26'
+    compile project(":util")
+    compile project(":swagger")
+    compile project(":api")
+    compile libs.mysql
 }

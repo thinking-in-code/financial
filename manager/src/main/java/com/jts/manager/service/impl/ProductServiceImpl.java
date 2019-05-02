@@ -20,7 +20,7 @@ import java.util.Date;
  */
 @Service
 @Slf4j
-public class ProductServiceImpl implements IProductService {
+public class ProductServiceImpl implements IProductService{
 
     @Autowired
     private ProductRepository productRepository;
@@ -86,7 +86,7 @@ public class ProductServiceImpl implements IProductService {
         Assert.notNull(id, "要查询的产品编号不能为空");
         log.debug("查询单个产品,id={}", id);
 
-        Product product = productRepository.findById(id).get();
+        Product product = productRepository.findOne(id);
         return product;
     }
 

@@ -2,6 +2,7 @@ package com.jts.entity;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -12,6 +13,7 @@ import java.util.Date;
  * @date 2019/4/22 19:11
  */
 @Data
+@Entity
 public class Product implements Serializable {
 
     private static final long serialVersionUID = -4521865397937710619L;
