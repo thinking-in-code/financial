@@ -2,6 +2,7 @@ package com.jts.manager.service.impl;
 
 import com.jts.entity.Product;
 import com.jts.entity.enums.ProductStatus;
+import com.jts.manager.error.ErrorEnum;
 import com.jts.manager.repositories.ProductRepository;
 import com.jts.manager.service.IProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -67,7 +68,7 @@ public class ProductServiceImpl implements IProductService{
      * @param product 要校验的产品
      */
     private void checkProduct(Product product) {
-        Assert.notNull(product.getId(), "产品编号不可为空");
+        Assert.notNull(product.getId(), ErrorEnum.ID_NOT_NULL.getCode());
         //其他非空校验
 
         Assert.isTrue((BigDecimal.ZERO.compareTo(product.getRewardRate()) < 0 && BigDecimal.valueOf(30).compareTo(product.getRewardRate()) >= 0), "收益率必须在0到30以内");
